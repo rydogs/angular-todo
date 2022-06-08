@@ -1,0 +1,4 @@
+<mat-list-item role="listitem" [ngStyle]="{'text-decoration': (item.done ? 'line-through':'normal') }"
+    (click)="remove()">
+    {{item.text}}
+</mat-list-item>

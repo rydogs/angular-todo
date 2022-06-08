@@ -1,0 +1,17 @@
+<mat-card>
+    <mat-card-title>
+        To-do
+        <button mat-button color="secondary" (click)="clear()">Clear</button>
+    </mat-card-title>
+    <mat-card-content>
+        <mat-list role="list">
+            <app-todo-item *ngFor="let i of items" [item]="i" (removeEvent)="markDone($event)"></app-todo-item>
+        </mat-list>
+    </mat-card-content>
+    <mat-card-actions>
+        <mat-form-field>
+            <input matInput type="text" [(ngModel)]="newItem" />
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="addItem()">Add</button>
+    </mat-card-actions>
+</mat-card>
